@@ -1,0 +1,228 @@
+body{
+	background:url('images/wallpaper3.jpg') no-repeat top center;
+	margin:0;
+	padding:0;
+	color:#FFFFFF;
+	font-family:calibri;
+        text-align:center;
+}
+.title{
+	color:#222;
+	font-size:40px;
+	font-family:calibri;
+}
+.title2{
+	margin-left:20px;
+	color:#FFFFFF;
+	text-shadow:1px 1px 1px #000;
+	font-size:22px;
+	font-family:calibri;
+}
+.button{
+	display: inline-block;
+	text-decoration:none;
+	padding-left:20px;
+	padding-right:20px;
+	padding-top:4px;
+	padding-bottom:4px;
+	border:0px solid #444;
+	background:#222;
+	color:#eee;
+	transition:box-shadow 500ms;
+	-webkit-transition:box-shadow 500ms;
+	-moz-transition:box-shadow 500ms;
+	-ms-transition:box-shadow 500ms;
+	-o-transition:box-shadow 500ms;
+	/*border-radius:20px;
+	-webkit-border-radius:20px;
+	-moz-border-radius:20px;
+	-ms-border-radius:20px;
+	-o-border-radius:20px;
+	box-shadow:5px 5px 8px #222;
+	-webkit-box-shadow:5px 5px 8px #222;
+	-moz-box-shadow:5px 5px 8px #222;
+	-ms-box-shadow:5px 5px 8px #222;
+	-o-box-shadow:5px 5px 8px #222;*/
+}
+.button:hover{
+	box-shadow:0px 0px 20px #BBB;
+}
+.function{
+	background-color:#59B344;
+	height:35px;
+	margin-right:4px;
+}
+
+#wrapper{
+	background:rgba(0,0,0,0);
+	margin:0;
+	padding:20px;
+}
+.mask{
+	display:block;
+	position:absolute;
+	border:0px solid #660;
+	background:rgba(0,0,0,0.7);
+	margin:0;
+	padding:10px;
+	padding-top:0px;
+	width:280px;
+	height:110px;
+	border-radius:0px;
+	-webkit-border-radius:0px;
+	-moz-border-radius:0px;
+	-ms-border-radius:0px;
+	-o-border-radius:0px;
+	transition:background 1000ms;
+}
+#kitchenWrapper{
+	background:url('images/kitchen.jpg')center;
+}
+#bedroomWrapper{
+	background:url('images/bedroom.jpg')center;
+}
+#bathroomWrapper{
+	background:url('images/bathroom.png')center;
+}
+#livingroomWrapper{
+	background:url('images/livingroom.png')center;
+}
+#kitchenlamp, #bedroomlamp, #bathroomlamp, #livingroomlamp{
+	border:1px solid #FFFFFF;
+	border-radius:3px;
+}
+.roomWrapper{
+	width:300px;
+	height:120px;
+	display:inline-block;
+	position:relative;
+	margin:5px;
+	margin-top:15px;
+	padding:0px;
+	border:1px solid #fff;
+	border-radius:0px;
+	-webkit-border-radius:0px;
+	-moz-border-radius:0px;
+	-ms-border-radius:0px;
+	-o-border-radius:0px;
+}
+img{
+	transition:transform 2000ms;
+	border:0px solid #660;
+	margin-left:20px;
+}
+img:hover{
+	transform:rotate(360deg);
+}
+
+/*Related To the Mqtt library Implementatiom*/
+
+#info{
+	margin-top:10px;
+	padding-left:30px;
+	padding-top:5px;
+	padding-bottom:5px;
+	border-top:1px dashed #fff;
+	border-bottom:1px dashed #fff;
+	background-color:rgba(0,0,0,0);
+}
+#state{
+	text-shadow:1px 1px 1px #000;
+}
+#idClient{
+	display:inline-block;
+}
+#loadingImage{
+	width:40px;
+	height:40px;
+	text-align:center;
+	display:none;
+}
+#info input{
+	display:inline-block;
+	height:30px;
+	color:#59B300;
+	font-size:16px;
+	/*border-radius:10px;
+	-webkit-border-radius:10px;*/
+	border:1px solid #59B300;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	text-align:center;
+	
+}
+#footer{
+	background:rgba(0,0,0,0);
+	border:0px solid #444;
+	height: auto; 
+	width: 100%;
+	margin:0;
+	padding:0;
+	text-align:center;
+	font-size: 0.9em;
+}
+.temperature,.humidity{
+	display:block;
+	float:right;
+	text-align:center;
+	font-size:12px;
+	/*font-weight:bolder;*/
+	width:29px;
+	height:auto;
+	border:0px solid #ffffff;
+	border-radius:15px 15px 3px 3px;
+	background-color:#ffffff;
+	color:#444;
+	margin-left:2px;
+	margin-right:2px;
+	transition:font-size 300ms;
+	overflow:hidden;
+	padding:0;
+	box-shadow:1px 1px 1px #444;
+}
+.temperature{
+	position:absolute;
+	top:-10px;
+	right:5px;
+}
+.humidity{
+	position:absolute;
+	top:-10px;
+	right:40px;
+}
+.temperature:hover,.humidity:hover{
+	z-index:1000;
+}
+h3{
+	margin-top:60px;
+}
+.background-wrap{
+	position:fixed;
+	z-index:-1000;
+	width:100%;
+	height:100%;
+	overflow:hidden;
+	top:0;
+	left:0;
+}
+#video-bg-elem{
+	position:absolute;
+	top:0;
+	left:0;
+	min-height:100%;
+	min-width:100%;
+}
+.content{
+	position:absolute;
+	width:100%;
+	min-height:100%;
+	z-index:1000;
+	background-color:rgba(10,20,10,0.3);
+}
+.tempHumIcon{
+	margin:0;
+	display:inline;
+	width:22px;
+	border:0px solid #000;
+	border-radius:15px;
+}

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="EN">
+<head>
+	<meta charset="UTF-8">
+	<meta name='viewport' content='width=device-width, user-scalable=no initial-scale=1.0'>
+	<meta name='apple-mobile-web-app-capable' content='yes' />
+	<meta name='apple-mobile-web-app-status-bar-style' content='black-translucent' />
+	<!--Descriptions-->
+		<meta name="Author" content="ANDRIAFARALOVA Degisth" />
+		<meta name="Keywords" content="html5 javascript password protected mqtt home demo" />
+		<meta name="Description" content="HTML5 Password Protected Home UI using MQTT protocol" />
+	<title>My Home-Demo with MQTT</title>
+	<!--CSS Style-->
+		<link rel="stylesheet" type="text/css" href="home_demo_3_style.css">
+	<!--LIBRARY-->
+		<script type="text/javascript" src="library/mqttws31.js"></script>
+		<script type="text/javascript" src="library/canvasjs.min.js"></script>
+		
+<body>
+
+	<div class="background-wrap">
+		
+		<video id="video-bg-elem" preload="auto" autoplay="true" loop muted="muted">
+			<source src="video/video.mp4" type="video/mp4">
+			<source src="video/video.webm" type="video/webm">
+			Video not supported!
+		</video>
+		
+	</div>
+	
+	<div class="content">
+
+		<img class="logo" src="images/home.jpg" alt="Home Demo" width="80px" height="80px"/>
+		<span class="title">Home DEMO</span><br />
+		<span class="title2">(MQTT & Arduino based project)</span>
+
+	<!-- STATE -->
+		<div id="info">
+			
+						
+						<input type="text" id="idClient" name="idClient" placeholder="Client ID">
+						
+						<!--<img id="loadingImage" src="images/loading3.gif">
+					
+					
+						
+						<input type="password" id="passClient" name="passClient" placeholder="Password">
+						
+					-->
+					
+						<button id="connect_button" class="button function" onClick="start();">Connect</button>
+					        <br>
+						<span id="state"></span>
+					
+					
+		</div>
+
+	<!-- WRAPPER -->
+		<div id="wrapper">
+			<!-- KITCHEN -->
+				<div id="kitchenWrapper" class="roomWrapper">
+					<div id="kitchen" class="mask">
+						<span  class="temperature"><img src="images/temp.jpg" class="tempHumIcon"><span id="temp1"> 0 °C</span></span>
+						<span class="humidity"><img src="images/hum.jpg" class="tempHumIcon"><span id="hum1"> 0 %</span></span>
+						<h3>KITCHEN</h3>
+						<button id="kitchenlamp" class="button" onClick="send_message('kitchenlamp');">Switch ON</button>
+					</div>
+				</div>
+			<!-- Kitchen End -->
+			
+			<!-- BEDROOM -->
+				<div id="bedroomWrapper" class="roomWrapper">
+					<div id="bedroom" class="mask">
+						<span  class="temperature"><img src="images/temp.jpg" class="tempHumIcon"><span id="temp2"> 0 °C</span></span>
+						<span  class="humidity"><img src="images/hum.jpg" class="tempHumIcon"><span id="hum2"> 0 %</span></span>
+						<h3>BEDROOM</h3>
+						<button id="bedroomlamp" class="button" onClick="send_message('bedroomlamp');">Switch ON</button>
+					</div>
+				</div>
+			<!-- Bedroom End -->
+			
+			<!-- LIVINGROOM -->
+				<div id="livingroomWrapper" class="roomWrapper">
+					<div id="livingroom" class="mask">
+						<span  class="temperature"><img src="images/temp.jpg" class="tempHumIcon"><span id="temp3"> 0 °C</span></span>
+						<span class="humidity"><img src="images/hum.jpg" class="tempHumIcon"><span id="hum3"> 0 %</span></span>
+						<h3>LIVINGROOM</h3>
+							<button id="livingroomlamp" class="button" onClick="send_message('livingroomlamp');">Switch ON</button>
+					</div>
+				</div>
+			<!-- Livingroom End -->
+			
+			<!-- BATHROOM -->
+				<div id="bathroomWrapper" class="roomWrapper">
+					<div id="bathroom" class="mask">
+						<span  class="temperature"><img src="images/temp.jpg" class="tempHumIcon"><span id="temp4"> 0 °C</span></span>
+						<span class="humidity"><img src="images/hum.jpg" class="tempHumIcon"><span id="hum4"> 0 %</span></span>
+						<h3>BATHROOM</h3>
+							<button id="bathroomlamp" class="button" onClick="send_message('bathroomlamp');">Switch ON</button>
+					</div>
+				</div>
+			<!-- Bathroom End -->
+			
+			
+			
+		</div>
+		<!-- WRAPPER End -->
+		
+		
+		
+		<!-- FOOTER -->
+			<div id="footer" style="padding:20px 0px;">
+				
+				© 2015 | By Andriafaralova Degisth - <small>路福</small> <br> Zhejiang Nornal University
+				
+			</div>
+		<!-- FOOTER End -->
+	</div>
+<!--My Script-->
+		<script type="text/javascript" src="home_demo_3_script.js"></script>
+
+</body>
+</html>
